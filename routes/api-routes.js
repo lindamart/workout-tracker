@@ -11,7 +11,7 @@ router.post("/api/workouts", ({ body }, res) => {
         });
 });
 
-// router.post("/api/transaction/bulk", ({ body }, res) => {
+// router.post("/api/workout", ({ body }, res) => {
 //     Transaction.insertMany(body)
 //         .then(dbTransaction => {
 //             res.json(dbTransaction);
@@ -23,28 +23,34 @@ router.post("/api/workouts", ({ body }, res) => {
 
 // update below with workout info
 router.put("/api/workouts/:id", (req, res) => {
-    Workout.findByIdAndUpdate(req.params.id, {$push:{exercises:req.body}},{new:true, runValidators:true})
-    .then(dbTransaction => {
-        res.json(dbTransaction);
-    })
-    .catch(err => {
-        res.status(400).json(err);
-    });
-});
-
-
-router.get("/api/workouts", (req, res) => {
-    Transaction.find({})
-        .sort({ date: -1 })
-        .then(dbTransaction => {
-            res.json(dbTransaction);
-        })
+    Workout.findByIdAndUpdate(
+        req.params.id,
+        { $push: { exercises: req.body } },
+        { new: true, runValidators: true })
+        .then((data) => res.json(data))
         .catch(err => {
             res.status(400).json(err);
         });
-});
+    });
+
 
 // add >>>/api/workouts/range
+router.get("/api/workouts/range", function (req, res) {
+    Workout.find()
+        .then((data) => res.json(data))
+        .catch((err) => {
+        res.json(err);
+        });
+    });
+    
+    router.post("/api/workouts/range", function (req, res) {
+    Workout.create({})
+        .then((data) => res.json(data))
+        .catch((err) => {
+        res.json(err);
+        });
+    });
+
 // delete??
 
 module.exports = router;
