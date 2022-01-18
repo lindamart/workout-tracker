@@ -3,6 +3,7 @@ const Workout = require("../models/workoutSchema.js");
 
 router.post("/api/workouts", ({ body }, res) => {
     Workout.create(body)
+    // is this data or dbWorkout
         .then(dbWorkout => {
             res.json(dbWorkout);
         })
@@ -11,17 +12,18 @@ router.post("/api/workouts", ({ body }, res) => {
         });
 });
 
-// router.post("/api/workout", ({ body }, res) => {
-//     Transaction.insertMany(body)
-//         .then(dbTransaction => {
-//             res.json(dbTransaction);
-//         })
-//         .catch(err => {
-//             res.status(400).json(err);
-//         });
-// });
+router.get("/api/workouts", function (req, res) {
+    Workout.find({})
+        .sort({ day: 1 })
+        .then((data) => {
+        res.json(data);
+        })
+        .catch((err) => {
+        res.status(400).json(err);
+        });
+    });
 
-// update below with workout info
+// update below with put workout info
 router.put("/api/workouts/:id", (req, res) => {
     Workout.findByIdAndUpdate(
         req.params.id,
@@ -51,6 +53,5 @@ router.get("/api/workouts/range", function (req, res) {
         });
     });
 
-// delete??
 
 module.exports = router;
