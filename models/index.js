@@ -1,4 +1,4 @@
-//export  model need help to check this
+//export  model need help to check this *********
 module.exports = {
-    Workout: require("./Exercise")
+    Workout: require("./workoutSchema")
 };

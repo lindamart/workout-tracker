@@ -11,16 +11,14 @@ mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
     {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-        useFindAndModify: false
+        useUnifiedTopology: true
     }
 );
 
 
-//add requireing routes
-app.use(require("./routes/api-routes.js"));
-app.use(require("./routes/view-routes.js"));
+//add requireing routes ***********
+(require("./routes/api-routes.js"))(app);
+(require("./routes/view-routes.js"))(app);
 
 
 // conntect to db w/ mongoose
