@@ -24,7 +24,7 @@ router.get("/stats", function(req, res) {
 
 }
 
-// do we still need module.exports = router with above format??
+// do we still need module.exports = router with above format?? dont think its needed but cant see anything
 
 
 // after this is completed and you can see all your html's then move to getting API routes working
