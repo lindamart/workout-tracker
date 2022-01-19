@@ -18,7 +18,9 @@ mongoose.connect(
 );
 
 
-
+//add requireing routes
+app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/view-routes.js"));
 
 
 // conntect to db w/ mongoose
