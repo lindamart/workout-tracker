@@ -27,7 +27,7 @@ https://github.com/lindamart/workout-tracker
 
 # Preview
 ### Add a workout
-![](assets/addWorkout.jpg)
+![](assets/addWorkouts.jpg)
 
 ### Workout Totals
 ![](assets/workoutTotal.jpg)
