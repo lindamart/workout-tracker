@@ -31,8 +31,15 @@ const workoutSchema = new Schema(
                 },
                 duration: {
                     type: Number,
-                    required: "Enter a an exercise duration in minutes"
+                    default: 0,
+                    required: "Enter an exercise duration in minutes"
+                },
+                distance: {
+                    type: Number,
+                    default: 0,
+                    required: "Enter an exercise distance"
                 }
+
             }
         ]
     },
@@ -51,6 +58,16 @@ workoutSchema.virtual("totalDuration").get(function (){
     }
     return this.exercises.reduce((total, exercise)=>{
         return total + exercise.duration;
+    },0)
+});
+
+workoutSchema.virtual("totalDistance").get(function (){
+    console.log(this)
+    if(typeof this.exercises === 'undefined'){
+        return 0;
+    }
+    return this.exercises.reduce((total, exercise)=>{
+        return total + exercise.distance;
     },0)
 });
 
