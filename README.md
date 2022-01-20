@@ -1,38 +1,53 @@
 # workout-tracker
-# employee_tracker
 
-Overview: 
-
+### Overview:
+For this assignment, I created a workout tracker that allows users to be able to view, create and track daily workouts . With existing front end code, this project required creation of a Mongo database with a Mongoose schema and handle routes with Express.
 
 # Links
 
-## Table of Contents 
+### Website link 
+https://boiling-scrubland-25653.herokuapp.com/
 
-* [Links](#links)
+### GitHub Link
+https://github.com/lindamart/workout-tracker
 
-* [Preview](#preview)
 
-* [Criteria](#criteria) 
+# Table of Contents 
 
-* [Contact](#contact)
+- [Preview](#preview)
 
-* [Credits](#credits)
+- [Build Criteria](#build-criteria) 
 
-* [License](#license)
+- [Contact Me](#contact-me)
+
+- [Credits](#credits)
+
+- [License](#license)
 
 
 
 # Preview
 
-![](assets/images/login.jpg)
+![](assets/addWorkout.jpg)
 
-![](assets/images/createPost.jpg)
+![](assets/workoutTotal.jpg)
 
-![](assets/images/deleteEditPost.jpg)
+![](assets/workoutDashboard.jpg)
 
-# Criteria
+# Build Criteria
+When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
 
-# Contact
+The user should be able to:
+
+  * Add exercises to the most recent workout plan.
+
+  * Add new exercises to a new workout plan.
+
+  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
+
+  * View the total duration of each workout from the past seven workouts on the `stats` page.
+
+# Contact Me
 
 Contact me with any questions.
 
@@ -41,18 +56,13 @@ Linda Martinez [lindanmjw@gmail.com](mailto:lindanmjw@gmail.com)
 
 # Credits 
 
-W3 Schools: https://www.w3schools.com/
+MongoDB: https://docs.atlas.mongodb.com/
 
-MDN Web Docs: https://developer.mozilla.org/en-US
+Mongoose: https://mongoosejs.com/
 
-Google Fonts: https://fonts.google.com/
-
-npm MySql & Sequelize: https://www.npmjs.com/
+MDN: https://developer.mozilla.org/en-US
 
 Heroku: https://dashboard.heroku.com/apps
-
-Handlebars: https://handlebarsjs.com/
-
 
 # License
 
