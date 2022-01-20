@@ -1,7 +1,6 @@
-# workout-tracker
+# Workout Tracker
 
-### Overview:
-For this assignment, I created a workout tracker that allows users to be able to view, create and track daily workouts . With existing front end code, this project required creation of a Mongo database with a Mongoose schema and handle routes with Express.
+Overview: For this assignment, I created a workout tracker that allows users to be able to view, create and track daily workouts . With existing front end code, this project required creation of a Mongo database with a Mongoose schema and handle routes with Express.
 
 # Links
 
@@ -27,11 +26,13 @@ https://github.com/lindamart/workout-tracker
 
 
 # Preview
-
+### Add a workout
 ![](assets/addWorkout.jpg)
 
+### Workout Totals
 ![](assets/workoutTotal.jpg)
 
+### Workout Dashboard
 ![](assets/workoutDashboard.jpg)
 
 # Build Criteria
@@ -46,6 +47,7 @@ The user should be able to:
   * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
 
   * View the total duration of each workout from the past seven workouts on the `stats` page.
+
 
 # Contact Me
 
