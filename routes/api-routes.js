@@ -7,7 +7,6 @@ module.exports = function(app){
 app.post("/api/workouts", ({ body }, res) => {
     console.log("HITTING POST")
     Workout.create({})
-    // is this data or dbWorkout **********
         .then(dbWorkout => {
             console.log("DATA TO POST TO DB ", dbWorkout)
             res.json(dbWorkout);
@@ -30,7 +29,6 @@ app.get("/api/workouts", function (req, res) {
         });
     });
 
-// update below with put workout info
 app.put("/api/workouts/:id", (req, res) => {
     console.log("HIT UPATE WORKOUTS")
     Workout.findByIdAndUpdate(
@@ -44,8 +42,6 @@ app.put("/api/workouts/:id", (req, res) => {
         });
     });
 
-
-// add >>>/api/workouts/range
 app.get("/api/workouts/range", function (req, res) {
     Workout.find()
         .then((data) => res.json(data))

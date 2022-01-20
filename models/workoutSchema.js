@@ -51,24 +51,24 @@ const workoutSchema = new Schema(
 
 );
 
-workoutSchema.virtual("totalDuration").get(function (){
+workoutSchema.virtual("totalDuration").get(function () {
     console.log(this)
-    if(typeof this.exercises === 'undefined'){
+    if (typeof this.exercises === 'undefined') {
         return 0;
     }
-    return this.exercises.reduce((total, exercise)=>{
+    return this.exercises.reduce((total, exercise) => {
         return total + exercise.duration;
-    },0)
+    }, 0)
 });
 
-workoutSchema.virtual("totalDistance").get(function (){
+workoutSchema.virtual("totalDistance").get(function () {
     console.log(this)
-    if(typeof this.exercises === 'undefined'){
+    if (typeof this.exercises === 'undefined') {
         return 0;
     }
-    return this.exercises.reduce((total, exercise)=>{
+    return this.exercises.reduce((total, exercise) => {
         return total + exercise.distance;
-    },0)
+    }, 0)
 });
 
 

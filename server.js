@@ -15,13 +15,9 @@ mongoose.connect(
     }
 );
 
-
-//add requireing routes ***********
 (require("./routes/api-routes.js"))(app);
 (require("./routes/view-routes.js"))(app);
 
-
-// conntect to db w/ mongoose
 
 app.listen(PORT, () =>{
     console.log(`App running on port ${PORT}`);
