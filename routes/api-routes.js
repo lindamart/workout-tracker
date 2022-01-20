@@ -25,6 +25,7 @@ app.get("/api/workouts", function (req, res) {
         res.json(data);
         })
         .catch((err) => {
+            console.log(err)
         res.status(400).json(err);
         });
     });
@@ -33,9 +34,10 @@ app.get("/api/workouts", function (req, res) {
 app.put("/api/workouts/:id", (req, res) => {
     console.log("HIT UPATE WORKOUTS")
     Workout.findByIdAndUpdate(
-        req.params.id,
+       {_id: req.params.id},
+        // req.params.id,
         { $push: { exercises: req.body } },
-        { new: true, runValidators: true })
+        { new: true})
         .then((data) => res.json(data))
         .catch(err => {
             res.status(400).json(err);
